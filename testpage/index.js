@@ -16,11 +16,12 @@ io.on('connection', (socket) => {
 
   socket.on('chatMessage', async (message) => {
     try {
-	    const apiKey = 'YOUR_API_KEY'; // Replace this with your actual API key
+	    const apiKey = 'YOUR_API_KEY';
 	    const apiResponse = await axios.post('https://api.openai.com/v1/conversations/text-davinci-003/messages', {
 		    message: message,
 		    apiKey: apiKey
-      },
+      });
+
       const responseMessage = apiResponse.data.message;
       io.emit('message', responseMessage);
     } catch (error) {
