@@ -23,7 +23,6 @@
   "env": {
     "API_KEY": "YOUR_API_KEY",
     "OTHER_ENV_VARIABLE": "some_value"
-  },
-  "serverless": true
+  }
 }
 
